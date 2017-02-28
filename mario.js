@@ -1,6 +1,8 @@
 
 printPyramid(5);
-
+// this is neat
+//testing commits by typing some contents
+//hello ready to challenge
 
 /*
  * printPyramid
