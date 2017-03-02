@@ -1,25 +1,25 @@
-
-printPyramid(5);
-// this is neat
-//testing commits by typing some contents
-//hello ready to challenge
-
-/*
- * printPyramid
- *
- * Prints to the console a pyramid of '#' characters of the specified height
- * For example, if height is 5, the console will look like this:
- *          ##
- *         ###
- *        ####
- *       #####
- *      ######
- */
+printPyramid(20);
+ // * printPyramid
+ // *
+ // * Prints to the console a pyramid of '#' characters of the specified height
+ // * For example, if height is 5, the console will look like this:
+ // *          ##
+ // *         ###
+ // *        ####
+ // *       #####
+ // *      ######
+ // */
 function printPyramid(height) {
-    console.log("Uh oh... the pyramid is under construction.");
-    console.log("Check back soon, our developers are hard at work as we speak!");
-
-    // TODO
-    // print that pyramid!
-
-}
+    for (var row = 1; row <= height; row ++){
+        var spacecount = height-row;
+        var hashcount = height-spacecount;
+        var space = "";
+        var hash = "";
+        for (var i = spacecount; i > 0; i--)
+            space += " ";
+        for (var j = 0; j <= hashcount; j++)
+            hash += "#";
+            console.log(space,hash);
+            }
+};
+console.log("Show me something!")
