@@ -12,7 +12,7 @@ printPyramid(20);
 function printPyramid(height) {
     for (var row = 1; row <= height; row ++){
         var spacecount = height-row;
-        var hashcount = height-spacecount;
+        var hashcount = row;
         var space = "";
         var hash = "";
         for (var i = spacecount; i > 0; i--)
@@ -22,4 +22,4 @@ function printPyramid(height) {
             console.log(space,hash);
             }
 };
-console.log("Show me something!")
+//console.log("Show me something!")
