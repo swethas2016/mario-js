@@ -15,7 +15,7 @@ $("#draw-form").submit(function(event) {
 
     // if they didn't type anything, yell at them and exit early
     if (heightStr == "") {
-        displayError("Please provide a height");
+        displayError("Please provide a height!");
         return;
     }
 
@@ -24,14 +24,14 @@ $("#draw-form").submit(function(event) {
 
     // if the height is not-a-number or not positive, yell at them and exit early
     if (isNaN(height) || height < 1) {
-        displayError(heightStr + ": That's not a valid height.");
+        displayError("That's not a valid height.");
         return;
     }
 
     // if the height is absurdly tall, yell at them and exit early
     var tooTall = 100;
     if (height > tooTall) {
-        displayError("Are you cray? I can't build a pyramid that tall.");
+        displayError("Are you crazy? I can't build a pyramid that tall.");
         return;
     }
 
@@ -48,7 +48,8 @@ $("#draw-form").submit(function(event) {
 function displayError(message) {
     // TODO 4
     // implement this function using jQuery
-    $('#height').addClass("display-error");
+    $('#pyramid').empty();
+    $('#height').addClass("invalid-field");
     $('.error-message').text(message);
 }
 
